@@ -13,7 +13,7 @@ router.get("/getAll", (req, res, next) => {
 });
 
 // Create a new list
-router.post("addLists", (req, res, next) => {
+router.post("/addLists", (req, res, next) => {
   const { name } = req.body;
   db.query("INSERT INTO lists (name) VALUES (?)", [name], (err, result) => {
     if (err) {
